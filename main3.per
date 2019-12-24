@@ -1,0 +1,46 @@
+
+ TOOLBAR ( STYLE="mystyle" )
+  ITEM accept ( TEXT="Ok", IMAGE="ok" )
+  ITEM cancel ( TEXT="cancel", IMAGE="cancel" )
+  SEPARATOR
+  ITEM add ( TEXT="Add", IMAGE="add" )
+  SEPARATOR
+  ITEM view ( TEXT="Display", IMAGE="view" )
+  ITEM query ( TEXT="Query", IMAGE="query" )
+  ITEM update ( TEXT="Update", IMAGE="modify" )
+  ITEM delete ( TEXT="Delete", IMAGE="del" )
+  ITEM exit ( TEXT="Exit", IMAGE="exit" )
+END
+LAYOUT
+GRID
+{
+<g g1                                                                        >
+ user_id:    [user_id               ]  fname:      [fname                 ]
+
+<t t1                                                                        >
+      user_id      fname    
+    [c1       |c2           ]        
+    [c1       |c2           ]   
+    [c1       |c2           ]   
+    [c1       |c2           ]  
+<                                                                            >
+}
+END
+END
+
+ATTRIBUTES
+    GROUP g1: TEXT = "Search criteria";
+    EDIT user_id = FORMONLY.user_id, COLOR = RED,STYLE = "important";
+    EDIT fname = FORMONLY.fname, COLOR = RED,STYLE = "important";
+   
+
+        EDIT c1 = FORMONLY.t_user_id ;
+        EDIT c2 = FORMONLY.t_fname;
+       
+       
+
+END
+
+INSTRUCTIONS
+SCREEN RECORD sr(t_user_id,t_fname);
+END

@@ -1,0 +1,26 @@
+TOOLBAR
+ITEM update ( TEXT="Update", IMAGE="modify" )
+END 
+
+LAYOUT
+GRID 
+{
+<t t1                                                    >
+         user_id        fname         
+    [c1             |c2             ]      
+    [c1             |c2             ]  
+    [c1             |c2             ]   
+    [c1             |c2             ]  
+<                                                        >
+}
+
+END 
+END
+ 
+ATTRIBUTES 
+ EDIT c1 = formonly.c1; 
+ EDIT c2 = formonly.c2; 
+
+
+ INSTRUCTIONS
+    SCREEN RECORD scr(c1,c2);
